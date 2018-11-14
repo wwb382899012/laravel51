@@ -37,7 +37,7 @@
     </head>
     <body>
         <div class="container">
-            <p>这是默认首页哦</p>  
+            <p>这是默认首页</p>
             <div class="content">
                 <div class="title">Laravel 5</div>
             </div>
