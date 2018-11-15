@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0px;
+}
+ul{list-style-type: none;}
+ul li{float:left;}
+
+
+
+.container .banner{
+    width: 100%;
+    height: 32px;
+    background: #2e3436;
+
+}
+.container .banner .banner-left{
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+.container .banner .banner-left p{
+    color: #fff;
+    float: left;
+    height: 100%;
+    line-height: 200%;
+    margin-left: 10%;
+}
+.container .banner .banner-right{
+    float: right;
+    width: 40%;
+    height: 100%;
+}
+.container .banner .banner-right ul{
+    float: right;
+    margin: 0 15% 0 0;
+    height: 100%;
+    display: table-cell;
+    width: 25%;
+}
+.container .banner .banner-right ul li{
+    width: 60px;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+
+
+}
+.container .banner .banner-right ul li a{
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    line-height: 200%;
+}
