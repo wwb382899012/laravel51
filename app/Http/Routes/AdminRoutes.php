@@ -13,6 +13,7 @@ class AdminRoutes
 {
     public function map(Registrar $router)
     {
-
+        //控制器路由
+        $router->get('/admin/user', ['as' => 'admin.user', 'uses' => 'Admin\UserController@index']); //as 命名路由
     }
 }

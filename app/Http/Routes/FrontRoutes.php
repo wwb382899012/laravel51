@@ -39,6 +39,8 @@ class FrontRoutes
             return Route('loginPage');
         });
 
+        $router->get('/doLogin', ['as' => 'doLogin', 'uses' => 'LoginController@doLogin']); //as 命名路由
+        $router->get('/redirect', ['as' => 'redirect', 'uses' => 'LoginController@redirect']); //as 命名路由
 
 
 
