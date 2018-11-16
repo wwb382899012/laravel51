@@ -60,3 +60,32 @@ a{
     height: 100%;
     line-height: 200%;
 }
+
+
+/*中间内容*/
+
+.container .content{
+    width: 80%;
+    margin: 20px auto;
+
+}
+.container .content .part{
+    border: 1px solid #ccc;
+    border-top: 1px solid #2e3436;
+
+}
+
+.container .content .part .p-banner{
+    background: #2e3436;
+    color: #fff;
+}
+.container .content .part .part-small{
+    padding: 10px;
+}
+.container .content .part .part-small p a{
+    color:#8a6d3b;
+    margin-left: 20px;
+}
+.container .content .part .part-small p span{
+    font-weight: bold;
+}

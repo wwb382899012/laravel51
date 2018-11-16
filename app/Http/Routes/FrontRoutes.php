@@ -35,9 +35,9 @@ class FrontRoutes
         });
 
         //调用命名路由
-        /*$router->get('/test',function(){
+        $router->get('/useNameRoute',function(){
             return Route('loginPage');
-        });*/
+        });
 
 
 
