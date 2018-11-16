@@ -15,8 +15,8 @@
                 </div>
                 <div class="banner-right">
                     <ul>
-                        <li><a href="<?php echo url('login')?>">登录</a></li>
-                        <li><a href="<?php echo url('login')?>">注册</a></li>
+                        <li><a href="<?php echo url('login')?>">登录后台</a></li>
+                        <li><a href="<?php echo url('register')?>">关于我们</a></li>
                     </ul>
 
                 </div>

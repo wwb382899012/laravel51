@@ -11,6 +11,9 @@
 |
 */
 
+
+//此路由文件已废弃，切割到app/Http/Routes文件夹,代码实现见 app/Providers/RouteServiceProvider.php
+
 Route::get('/', function () {
     return view('home');
 });
