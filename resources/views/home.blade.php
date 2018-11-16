@@ -11,7 +11,7 @@
         <div class="container">
             <div class="banner">
                 <div class="banner-left">
-                    <p>欢迎来到laravel5.1</p>
+                    <p><a href="<?php echo url();  ?>">欢迎来到laravel5.1</a></p>
                 </div>
                 <div class="banner-right">
                     <ul>

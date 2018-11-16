@@ -1,0 +1,49 @@
+
+https://laravelacademy.org/post/417.html
+
+1、路由命名——给路由起个名字
+1.1 基本使用
+我们使用as关键字来为路由命名：
+
+Route::get('/hello/laravelacademy',['as'=>'academy',function(){
+    return 'Hello LaravelAcademy！';
+}]);
+路由命名可以让我们在使用route函数生成指向该路由的URL或者生成跳转到该路由的重定向链接时更加方便：
+
+Route::get('/testNamedRoute',function(){
+   return route('academy');
+});
+我们在浏览器中访问http://laravel.app:8000/testNamedRoute时输出http://laravel.app:8000/hello/laravelacademy，然后我们修改上述闭包内代码：
+
+Route::get('/testNamedRoute',function(){
+    return redirect()->route('academy');
+});
+再次在浏览器中访问http://laravel.app:8000/testNamedRoute时会跳转到http://laravel.app:8000/hello/laravelacademy。
+
+我们甚至还可以在使用带参数的路由命名：
+
+Route::get('/hello/laravelacademy/{id}',['as'=>'academy',function($id){
+    return 'Hello LaravelAcademy '.$id.'！';
+}]);
+对应的测试路由定义如下：
+
+Route::get('/testNamedRoute',function(){
+    return redirect()->route('academy',['id'=>1]);
+});
+这样，当我们在浏览器中访问http://laravel.app:8000/testNamedRoute时会跳转到http://laravel.app:8000/hello/laravelacademy/1
+
+1.2 路由分组时路由命名方式
+再来看一个更复杂的例子，使用路由分组时如何定义路由命名？官网文档提供的例子如下：
+
+Route::group(['as' => 'admin::'], function () {
+    Route::get('dashboard', ['as' => 'dashboard', function () {
+        //
+    }]);
+});
+在Route门面的group方法中使用一个as关键字来指定该路由群组中所有路由的公共前缀，然后再在里面每个路由中使用as关键字为该路由命名。
+
+这样我们可以通过如下方式来生成该路由URL：
+
+Route::get('/testNamedRoute',function(){
+    return route('admin::dashboard');
+});

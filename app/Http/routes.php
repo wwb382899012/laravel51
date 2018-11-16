@@ -12,12 +12,17 @@
 */
 
 
-//此路由文件已废弃，切割到app/Http/Routes文件夹,代码实现见 app/Providers/RouteServiceProvider.php
+//此路由文件已包含，切割到app/Http/Routes文件夹,代码实现见 app/Providers/RouteServiceProvider.php
 
-Route::get('/', function () {
-    return view('home');
-});
 
-Route::get('/login', function () {
-    return view('login');
+//路由分组:中间件
+
+Route::group(['middleware'=>'age'],function(){
+    Route::get('/test',function(){
+        //使用Test中间件
+    });
+
 });
+Route::get('/test/refuse',['as'=>'refuse',function(){  //这里的refuse对应AgeMiddleware中间件的逻辑,访问 laravel51.com/test?age=15 ，页面会跳转到laravel51.com/test/refuse，并输出内容:未成年人禁止入内！
+    return "未成年人禁止入内！";
+}]);

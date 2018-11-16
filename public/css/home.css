@@ -5,6 +5,10 @@
 *,body{font-size: 14px;}
 ul{list-style-type: none;}
 ul li{float:left;}
+a{
+    color: #fff;
+    text-decoration: none;
+}
 
 
 
@@ -25,6 +29,9 @@ ul li{float:left;}
     height: 100%;
     line-height: 200%;
     margin-left: 10%;
+    font-size: 16px;
+}
+.container .banner .banner-left p a{
     font-size: 16px;
 }
 .container .banner .banner-right{

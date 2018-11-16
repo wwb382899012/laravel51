@@ -1,0 +1,6 @@
+
+自动生成中间件TestMiddleware.php，进入项目根目录，再运行如下命令(前提是php命令已经配置了系统变量)
+
+cd E:\phpStudy\PHPTutorial\WWW\laravel51
+
+php artisan make:middleware TestMiddleware
